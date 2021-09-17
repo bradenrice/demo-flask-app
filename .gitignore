@@ -1,4 +1,7 @@
-# Byte-compiled / optimized / DLL files
+# DB management
+database.ini
+
+Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class

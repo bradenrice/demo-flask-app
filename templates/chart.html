@@ -1,0 +1,51 @@
+<head>
+    <meta charset="utf-8" />
+    <title>Charts</title>
+    <!-- import plugin script -->
+    <script>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- </script src='static/myChart.js'> -->
+
+</head>
+<body>
+    <h1>Simple Line Chart</h1>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+
+        const labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+
+        // === include 'setup' then 'config' above ===
+
+        var myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+</body>
