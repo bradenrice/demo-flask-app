@@ -19,3 +19,6 @@
 - Modify methods of pg_hba.conf file in psycopf2 (radius)
 - Request chart.js
 - Request Bootstrap or W3.CSS (might already have access to)
+- pyscopg2
+- gunicorn
+- Flask
