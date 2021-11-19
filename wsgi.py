@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from flask import Flask, render_template
-import psycopg2
+import psycopg
 from config import config
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def get_list():
 
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect(**params)
+        conn = psycopg.connect(**params)
 
         # create a cursor
         cur = conn.cursor()
@@ -25,7 +25,7 @@ def get_list():
 	# close the communication with the PostgreSQL
         cur.close()
         return flat_list
-    except (Exception, psycopg2.DatabaseError) as error:
+    except (Exception, psycopg.DatabaseError) as error:
         print(error)
         return None
     finally:

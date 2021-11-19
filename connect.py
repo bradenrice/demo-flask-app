@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import psycopg2
+import psycopg
 from config import config
 
 def connect():
@@ -8,10 +8,10 @@ def connect():
     try:
         # read connection parameters
         params = config()
-
+        print('Params ', params)
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect(**params)
+        conn = psycopg.connect(**params)
 
         # create a cursor
         cur = conn.cursor()
@@ -39,7 +39,7 @@ def connect():
 
 	# close the communication with the PostgreSQL
         cur.close()
-    except (Exception, psycopg2.DatabaseError) as error:
+    except (Exception, psycopg.DatabaseError) as error:
         print(error)
     finally:
         if conn is not None:
