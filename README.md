@@ -6,7 +6,7 @@
 
 ## DB
 - postgres
-- pyscopg2
+- pyscopg3
 
 ## Host
 - gunicorn
@@ -14,11 +14,9 @@
 
 
 ## What we need:
-- Python3-dev
-- Libpq-dev (Ask cyberops which version we need)
-- Modify methods of pg_hba.conf file in psycopf2 (radius)
+- Modify methods of pg_hba.conf in database data directory which should be /var/lib/pgsql/10/data (radius)
 - Request chart.js
 - Request Bootstrap or W3.CSS (might already have access to)
-- pyscopg2
+- pyscopg3
 - gunicorn
 - Flask
